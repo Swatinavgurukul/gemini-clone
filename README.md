@@ -3,7 +3,7 @@
 This is a fully functional, responsive, Gemini-style conversational AI chat application built using **React**, **Redux**, and **Tailwind CSS**. It simulates OTP login, chatroom management, AI messaging, image uploads, and modern UI/UX features.
 
 ### 🚀 Live URL
-[https://your-vercel-app.vercel.app](https://your-vercel-app.vercel.app)
+[https://gemini-clone-eight-topaz.vercel.app/](https://gemini-clone-eight-topaz.vercel.app/)
 
 ---
 

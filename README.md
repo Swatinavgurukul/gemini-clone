@@ -1,46 +1,94 @@
-# Getting Started with Create React App
+# Gemini Frontend Clone – Kuvaka Tech Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a fully functional, responsive, Gemini-style conversational AI chat application built using **React**, **Redux**, and **Tailwind CSS**. It simulates OTP login, chatroom management, AI messaging, image uploads, and modern UI/UX features.
 
-## Available Scripts
+### 🚀 Live URL
+[https://your-vercel-app.vercel.app](https://your-vercel-app.vercel.app)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📦 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| Feature              | Tech Stack / Library           |
+|----------------------|--------------------------------|
+| Framework            | React (with TypeScript)        |
+| State Management     | Redux + Redux Toolkit          |
+| Form Validation      | React Hook Form                |
+| Styling              | Tailwind CSS                   |
+| Deployment           | Vercel                         |
+| Image Upload         | Base64 via FileReader          |
+| AI Response          | Simulated via setTimeout       |
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧠 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Authentication
+- OTP-based login using country code (simulated)
+- Validated forms using React Hook Form
 
-### `npm run build`
+### Dashboard
+- Create/Delete chatrooms
+- Debounced search to filter chatrooms
+- Toast notifications
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Chatroom Interface
+- User and AI messages with timestamps
+- “Gemini is typing…” indicator
+- Simulated delayed AI responses
+- Auto-scroll to latest message
+- Reverse infinite scroll with dummy data
+- Client-side message pagination
+- Image upload in chat (base64 preview)
+- Copy-to-clipboard on message hover
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Global UX
+- Mobile responsive
+- Dark mode toggle
+- Toasts for all key actions
+- Loading skeletons
+- Keyboard accessibility
+- LocalStorage for auth/chat persistence
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📁 Folder Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+/src
+├── components/
+│ ├── AuthForm.tsx
+│ ├── Dashboard.tsx
+│ ├── Chatroom.tsx
+│ ├── ThemeToggle.tsx
+│ └── LoadingSkeleton.tsx
+├── redux/
+│ ├── store.ts
+│ ├── authSlice.ts
+│ └── chatSlice.ts
+├── utils/
+│ └── storage.ts
+├── App.tsx
+├── index.tsx
+└── index.css
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 🧪 How Features Were Implemented
 
-## Learn More
+- **Throttling**: `setTimeout` delays AI responses
+- **Pagination & Scroll**: Paginated dummy data with reverse scroll logic
+- **Validation**: React Hook Form
+- **Persistence**: Redux state saved/loaded via `localStorage`
+- **Image Upload**: Base64 using FileReader API
+- **Copy to Clipboard**: `navigator.clipboard.writeText`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ Getting Started
+
+```bash
+git clone https://github.com/your-username/gemini-clone.git
+cd gemini-clone
+npm install
+npm start

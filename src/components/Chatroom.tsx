@@ -40,6 +40,9 @@ export const Chatroom = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-4">
+      <div className="text-center text-3xl font-bold text-fuchsia-600 mb-4">
+        Hello, There!
+      </div>
       <div className="h-[500px] overflow-y-auto bg-gray-100 dark:bg-gray-800 rounded p-2">
         {messages.map((msg, idx) => (
           <div

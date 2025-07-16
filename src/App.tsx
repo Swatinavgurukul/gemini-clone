@@ -14,16 +14,30 @@ function App() {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
 
   return (
+    // <Router>
+    //   <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white">
+    //     <ThemeToggle />
+    //     <Routes>
+    //       <Route path="/" element={isLoggedIn ? <Dashboard /> : <AuthForm />} />
+    //       <Route path="/chatroom/:id" element={<Chatroom />} />
+    //     </Routes>
+    //     <ToastContainer position="top-right" autoClose={2000} />
+    //   </div>
+    // </Router>
     <Router>
-      <div className="min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white">
-        <ThemeToggle />
+      <div className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-black dark:text-white space-y-6">
+        <div className="mt-4">
+          <ThemeToggle />
+        </div>
         <Routes>
           <Route path="/" element={isLoggedIn ? <Dashboard /> : <AuthForm />} />
           <Route path="/chatroom/:id" element={<Chatroom />} />
         </Routes>
+
         <ToastContainer position="top-right" autoClose={2000} />
       </div>
     </Router>
+
   );
 }
 
